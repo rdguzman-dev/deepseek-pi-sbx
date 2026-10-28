@@ -1,0 +1,47 @@
+schemaVersion: "2"
+kind: sandbox
+name: pi
+displayName: Pi
+description: Minimal terminal coding agent with extensible tools, skills, and TUI
+sandbox:
+  image: docker.io/sbx/pi-image:latest
+  entrypoint:
+    - pi
+
+agentInstructions:
+  filename: AGENTS.md
+
+permissions:
+  network:
+    allow: # Add additional hostnames as needed
+      - api.deepseek.com
+      - registry.npmjs.org
+
+credentials:
+  - service: deepseek
+    required: true
+    apiKey:
+      name: DEEPSEEK_API_KEY
+      proxyManaged: true
+      inject:
+        - domain: api.deepseek.com
+          scheme: bearer
+
+setup:
+  install:
+    - command: 'if [ -n "${HTTP_PROXY:-}" ]; then npm config set proxy="$HTTP_PROXY" https-proxy="${HTTPS_PROXY:-$HTTP_PROXY}"; fi'
+      user: "1000"
+
+  files:
+    - path: /home/agent/.pi/agent/settings.json
+      content: |
+        {
+          "defaultProvider": "deepseek",
+          "defaultModel": "deepseek-flash",
+          "defaultThinkingLevel": "high",
+          "packages": [
+            # Add packages as needed
+          ],
+          "theme": "system",  # Change as needed
+        }
+      mode: "0644"
