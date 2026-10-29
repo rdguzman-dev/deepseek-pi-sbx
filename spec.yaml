@@ -17,7 +17,7 @@ permissions:
       - api.deepseek.com
       - registry.npmjs.org
 
-credentials:
+credentials: # Add additional services as needed
   - service: deepseek
     required: true
     apiKey:
@@ -35,13 +35,13 @@ setup:
   files:
     - path: /home/agent/.pi/agent/settings.json
       content: |
-        {
+        { # Customize as needed
           "defaultProvider": "deepseek",
           "defaultModel": "deepseek-flash",
           "defaultThinkingLevel": "high",
           "packages": [
             # Add packages as needed
           ],
-          "theme": "system",  # Change as needed
+          "theme": "system",
         }
       mode: "0644"
