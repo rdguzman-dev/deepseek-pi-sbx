@@ -39,9 +39,7 @@ setup:
           "defaultProvider": "deepseek",
           "defaultModel": "deepseek-flash",
           "defaultThinkingLevel": "high",
-          "packages": [
-            
-          ],
+          "packages": [],
           "theme": "system",
         }
       mode: "0644"
