@@ -23,12 +23,12 @@ sbx secret set-custom --host api.deepseek.com --env DEEPSEEK_API_KEY --value YOU
 sbx run ./path/to/deepseek-pi-sbx /path/to/example-project
 ```
 
-> Note: The "." in the first path is required to use a directory as an sbx kit.
+> Note: sbx requires relative local kit references to start with `./`
 
 4. (Optional) Create an alias:
 
 ```bash
 pi-box() {
-  sbx run /path/to/deepseek-pi-sbx "${1:-.}"
+  sbx run ./path/to/deepseek-pi-sbx "${1:-.}"
 }
 ```
