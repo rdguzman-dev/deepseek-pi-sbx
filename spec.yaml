@@ -39,7 +39,9 @@ setup:
           "defaultProvider": "deepseek",
           "defaultModel": "deepseek-flash",
           "defaultThinkingLevel": "high",
-          "packages": [],
+          "packages": [
+            "npm:pi-image-paste"
+          ],
           "theme": "system",
         }
       mode: "0644"
