@@ -20,8 +20,10 @@ sbx secret set-custom --host api.deepseek.com --env DEEPSEEK_API_KEY --value YOU
 3. Run the agent sandbox:
 
 ```bash
-sbx run /path/to/deepseek-pi-sbx /path/to/example-project
+sbx run ./path/to/deepseek-pi-sbx /path/to/example-project
 ```
+
+> Note: The "." in the first path is required to use a directory as an sbx kit.
 
 4. (Optional) Create an alias:
 
