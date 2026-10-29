@@ -30,7 +30,7 @@ sbx run ./path/to/deepseek-pi-sbx /path/to/example-project
 4. (Optional) Create an alias:
 
 ```bash
-# Example alias for `.bashrc` or `.zshrc`
+# Example alias for .bashrc or .zshrc
 pi-box() {
   sbx run ./path/to/deepseek-pi-sbx "${1:-.}"
 }
@@ -39,5 +39,5 @@ pi-box() {
 ## Configuration
 
 - Network permissions, additional providers, and default Pi settings (including
-  packages and themes) are configured in `spec.yaml`.
-- Skills and themes are defined in `files/home/.pi/agent/`.
+  packages and themes) are configured in `spec.yaml`
+- Skills and themes are defined in `files/home/.pi/agent/`
