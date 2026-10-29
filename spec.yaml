@@ -34,13 +34,13 @@ setup:
 
   files:
     - path: /home/agent/.pi/agent/settings.json
-      content: |
-        { # Customize as needed
+      content: | # Customize as needed
+        {
           "defaultProvider": "deepseek",
           "defaultModel": "deepseek-flash",
           "defaultThinkingLevel": "high",
           "packages": [
-            # Add packages as needed
+            
           ],
           "theme": "system",
         }
